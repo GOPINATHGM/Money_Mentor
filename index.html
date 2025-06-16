@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Calculator</h1>
+        <div class="form-group">
+            <label for="month">Month:</label>
+            <select id="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="income">Income:</label>
+            <input type="number" id="income" placeholder="Enter your income">
+        </div>
+        <div class="form-group">
+            <label for="category">Expense Category:</label>
+            <select id="category">
+                <option value="house-rent">House Rent</option>
+                <option value="groceries">Groceries</option>
+                <option value="utilities">Utilities</option>
+                <option value="transportation">Transportation</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="expense">Expense Amount:</label>
+            <input type="number" id="expense" placeholder="Enter the expense amount">
+        </div>
+        <button onclick="addExpense()">Add Expense</button>
+        <button onclick="calculateBudget()">Calculate</button>
+        <div id="result">
+            <h2>Expense Report</h2>
+            <div id="expense-list">
+                <!-- Individual expenses will be dynamically added here -->
+            </div>
+            <p id="total-expenses">Total Expenses: $0</p>
+            <p id="remaining-budget">Remaining Budget: $0</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
